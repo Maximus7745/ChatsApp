@@ -30,6 +30,8 @@
                 android:layout_weight="1"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:text="Chat Name"/>
 
             <TextView
@@ -47,6 +49,8 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:textColor="#555555"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:text="Message text"/>
     </LinearLayout>
 </LinearLayout>
