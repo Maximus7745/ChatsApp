@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+       
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:src="@drawable/arrow_back" />
+
+        
+        <ImageView
+            android:id="@+id/image_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/android"
+            android:paddingHorizontal="@dimen/browser_actions_context_menu_min_padding"
+             />
+
+        
+        <TextView
+            android:id="@+id/chat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название чата"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+             />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        
+        <ListView
+            android:id="@+id/message_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/message_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Введите сообщение..."
+                android:maxLines="4"
+                android:inputType="textMultiLine|textCapSentences"
+                android:imeOptions="actionSend"/>
+
+         
+            <ImageButton
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_send"
+                android:contentDescription="Отправить"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+   
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
